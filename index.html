@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetAlert 2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>SweetAlert 2</h1>
+            </div>
+            <div class="col-12 text-center">
+                <p>Esta biblioteca não é a original do SweetAlert, é uma versão do SweetAlert 2 modificada.</p>
+            </div>
+            <div class="col-12 text-center">
+                <button type="button" class="btn btn-success text-uppercase font-weight-bold" onclick="success()">Sucesso</button>
+                <button type="button" class="btn btn-danger text-uppercase font-weight-bold" onclick="error()">Erro</button>
+                <button type="button" class="btn btn-warning text-uppercase font-weight-bold" onclick="warning()">Aviso</button>
+                <button type="button" class="btn btn-primary text-uppercase font-weight-bold" onclick="question()">Pergunta</button>
+                <button type="button" class="btn btn-info text-uppercase font-weight-bold" onclick="info()">Info</button>
+            </div>
+            <div class="col-12 text-center mt-5">
+                <a href="https://github.com/ArtPublicidade/sweetAlert" class="btn btn-dark font-weight-bold"><i class="fab fa-github mr-2"></i>GitHub</a>
+            </div>
+        </div>
+    </div>
+    <script src="sweetalert2.js"></script>
+    <script>
+        var success = function(){
+            Swal.fire({
+                type: 'success',
+                title: 'Sucesso',
+                html: 'O usuário foi cadastrado!'
+            });
+        }
+        var error = function(){
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                html: 'Algo deu errado!'
+            });
+        }
+        var warning = function(){
+            Swal.fire({
+                type: 'warning',
+                title: 'Atenção!',
+                html: 'Você não tem permissão para acessar este link!'
+            });
+        }
+        var question = function(){
+            Swal.fire({
+                type: 'question',
+                title: 'Sair do Sistema?',
+                html: 'Você tem certeza que deseja sair do sistema?'
+            });
+        }
+        var info = function(){
+            Swal.fire({
+                type: 'info',
+                title: 'HTML',
+                html: 'É uma das linguagens que utilizamos para desenvolver websites.'
+            });
+        }
+    </script>
+</body>
+</html>
